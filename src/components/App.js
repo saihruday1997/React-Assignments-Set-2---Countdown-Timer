@@ -6,6 +6,15 @@ const App = () => {
   // let [timecount, setTimecount] = useState(0);
   let [currtime, setCurrtime] = useState(0);
 
+  // let handleChange = (e) => {
+  //   let text = e.target.value;
+  //   if (!/^\d+$/.test(text)) {
+  //     return;
+  //   }
+
+  //   setTimecount(text);
+  // };
+
   let keydownFun = (e) => {
     if (e.keyCode !== 13) {
       return;
@@ -15,6 +24,10 @@ const App = () => {
 
     let input = Math.floor(text);
     if (input < 0) {
+      input = 0;
+    }
+
+    if (!/^\d+$/.test(text)) {
       input = 0;
     }
 
