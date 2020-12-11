@@ -49,7 +49,7 @@ const App = () => {
           Reverse countdown for
           <input
             id="timeCount"
-            type="number"
+            type="text"
             onKeyDown={(event) => keydownFun(event)}
           />{" "}
           sec.
