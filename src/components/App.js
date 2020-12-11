@@ -35,7 +35,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    setInterval(() => {
       if (currtime > 0) {
         setCurrtime(currtime - 1);
       }
