@@ -35,11 +35,14 @@ const App = () => {
   };
 
   useEffect(() => {
-    setInterval(() => {
-      if (currtime > 0) {
+    let id = null;
+    if (currtime > 0) {
+      id = setInterval(() => {
         setCurrtime(currtime - 1);
-      }
-    }, 1000);
+      }, 1000);
+    }
+
+    return () => clearInterval(id);
   });
 
   return (
